@@ -1,0 +1,65 @@
+
+h1 {
+
+  font-weight : bold;
+
+}
+h2 {
+
+  font-weight : bold;
+
+}
+.link {
+  background-color: #3366cc;
+  border : 4px solid #1D2475; overflow: hidden;
+  border-radius : 15px;
+  margin : 10px;
+  float : left;
+  padding : 5px;
+}
+
+body {
+  margin-left : 10%;
+  margin-right : 10%;
+  background-image : url("‪C:\Users\home2\Desktop\blueTextureBG.jpg");
+}
+.shout {
+  background-color : white;
+  border : 10px solid white;
+  text-align:justify;
+
+}
+.special {
+  background-color : #1D2475;
+  color : white;
+  text-align : right;
+}
+.special h2 {
+  color : #cccccc;
+  font-size : 14pt;
+  font-weight:bold;
+}
+img {
+  float : right;
+}
+.mundan {
+  overflow:hidden;
+}
+.mundana {
+  border : 4px solid #1D2475; overflow: hidden;
+  border-radius : 15px;
+
+  background-color : #99CCFF;
+  padding : 5px;
+  margin-top : 10px;
+}
+.mundana img {
+  float : right;
+  overflow:hidden;
+}
+span.mission {
+  border-bottom : 2px dashed blue;
+}
+*:hover:not([class]):not(html):not(ul) {
+  background-color : #a6ce39;
+}
