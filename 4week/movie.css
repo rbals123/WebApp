@@ -1,0 +1,116 @@
+body {
+  background-image : url("background.png");
+  background-repeat : repeat;
+  font-size : 8pt;
+  font-family : Verdana, Tahoma, sans-serif;
+  padding : 0px;
+  margin : 0px;
+}
+h1 {
+  font-size : 24pt;
+  font-family : Tahoma, Verdana, sans-serif;
+  font-style : bold;
+  text-shadow : 3px 3px #999999;
+  text-align : center;
+}
+.leftmain img{
+  height : 83px;
+  vertical-align : bottom;
+}
+.leftmain {
+  color : red;
+  font-weight : bold;
+  font-size : 48pt;
+}
+
+.banner {
+  background-image : url("bannerbg.png");
+  background-repeat : repeat-x;
+  height : 50px;
+
+}
+.banner img {
+  display : block;
+  margin-left : auto;
+  margin-right : auto;
+}
+.body {
+  width : 800px;
+  margin-left : auto;
+  margin-right : auto;
+  border : 4px solid gray;
+  border-radius : 20px;
+  overflow : hidden;
+}
+
+.bannerlist {
+  width : 250px;
+  float : right;
+  background-color : #a2b964;
+  font-family : Arial, sans-serif;
+  font-size : 8pt;
+  width : 250px;
+}
+.bannerlist dt {
+  margin-top : 10pt;
+  margin-left : 10pt;
+  font-weight : bold;
+}
+.bannerlist ul {
+  list-style-type : none;
+  padding : 0px;
+  margin : 0px;
+}
+
+.leftre {
+  margin-left : 2%;
+  width : 47%;
+  float : left;
+}
+
+.main {
+  width : 550px;
+  background-image : url('rbg.png');
+  background-size : 550px 83px;
+  background-repeat : repeat-x;
+}
+.op {
+  font-size : 8pt;
+  font-weight : bold;
+  background-color : #e8dc9b;
+  border : 2px solid gray;
+  border-radius : 10px;
+  overflow : hidden;
+  padding : 8px;
+}
+.op + p {
+  margin-bottom : 20pt;
+  text-align-last : auto;
+}
+.op img {
+  margin-right : 5px;
+  float:left;
+}
+.right {
+  margin-right : 2%;
+  width : 47%;
+  float : right;
+}
+.overall span {
+  font-style : italic;
+  font-size : 8pt;
+  margin-top : 5px;
+}
+.main + p {
+  background-color : #a2b964;
+  margin : 0px;
+  text-align : center;
+  padding : 0px;
+  clear : both;
+}
+.option {
+  position : fixed;
+  right : 0;
+  bottom : 0;
+  opacity : 0.5;
+}
