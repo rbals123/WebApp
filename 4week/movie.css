@@ -13,34 +13,15 @@ h1 {
   text-shadow : 3px 3px #999999;
   text-align : center;
 }
-.leftmain img{
-  height : 83px;
-  vertical-align : bottom;
-}
-.leftmain {
-  color : red;
-  font-weight : bold;
-  font-size : 48pt;
-}
-
 .banner {
   background-image : url("bannerbg.png");
   background-repeat : repeat-x;
   height : 50px;
-
 }
 .banner img {
   display : block;
   margin-left : auto;
   margin-right : auto;
-}
-.body {
-  width : 800px;
-  margin-left : auto;
-  margin-right : auto;
-  border : 4px solid gray;
-  border-radius : 20px;
-  overflow : hidden;
 }
 
 .bannerlist {
@@ -49,7 +30,7 @@ h1 {
   background-color : #a2b964;
   font-family : Arial, sans-serif;
   font-size : 8pt;
-  width : 250px;
+
 }
 .bannerlist dt {
   margin-top : 10pt;
@@ -61,6 +42,21 @@ h1 {
   padding : 0px;
   margin : 0px;
 }
+.main {
+  width : 550px;
+  background-image : url('rbg.png');
+  background-size : 550px 83px;
+  background-repeat : repeat-x;
+}
+.leftmain {
+  color : red;
+  font-weight : bold;
+  font-size : 48pt;
+}
+.leftmain img{
+  height : 83px;
+  vertical-align : bottom;
+}
 
 .leftre {
   margin-left : 2%;
@@ -68,12 +64,6 @@ h1 {
   float : left;
 }
 
-.main {
-  width : 550px;
-  background-image : url('rbg.png');
-  background-size : 550px 83px;
-  background-repeat : repeat-x;
-}
 .op {
   font-size : 8pt;
   font-weight : bold;
@@ -96,6 +86,15 @@ h1 {
   width : 47%;
   float : right;
 }
+.body {
+  width : 800px;
+  margin-left : auto;
+  margin-right : auto;
+  border : 4px solid gray;
+  border-radius : 20px;
+  overflow : hidden;
+}
+
 .overall span {
   font-style : italic;
   font-size : 8pt;
