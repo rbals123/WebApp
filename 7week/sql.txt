@@ -1,0 +1,63 @@
+create table student (
+ student_id INTEGER NOT NULL PRIMARY KEY,
+ name VARCHAR(10) NOT NULL,
+ year TINYINT NOT NULL DEFAULT "1",
+ dept_no INTEGER NOT NULL,
+ major VARCHAR(20)
+);
+create table college (
+ dept_no INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+ dept_name VARCHAR(20) NOT NULL UNIQUE,
+ office VARCHAR(20) NOT NULL,
+ office_tel VARCHAR(13) 
+);
+
+alter table student change column major major VARCHAR(30);
+desc student;
+alter table student add column gender VARCHAR(10) NOT NULL;
+
+alter table student drop column gender;
+
+insert into student VALUES (20070002, 'Jane Smith', 3, 4, 'Business Administration'), (20060001, 'Ashley Jackson', 4, 4, 'Business Administration'),
+(20030001, 'Liam Johnson', 4, 2, 'Electrical Engineering'), (20040003, 'Jacob Lee', 3, 2, 'Electrical Engineering'),
+(20060002, 'Noah Kim', 3, 1, 'Computer Science'), (20100002, 'Ava Lim', 3, 4, 'Business Administration'),
+(20110001, 'Emma Watson', 2, 1, 'Computer Science'), (20080003, 'Lisa Maria', 4, 3, 'Law'),
+(20040002, 'Jacob William', 4, 5, 'Law'), (20070001, 'Emily Rose', 4, 4, 'Business Administration'),
+(20100001, 'Ethan Hunt', 3, 4, 'Business Administration'), (20110002, 'Jason Mraz' 2, 1, 'Electrical Engineering'),
+(20030002, 'John Smith', 5, 1, 'Computer Science'), (20070003, 'Sophia Park', 4, 3, 'Law'),
+(20070007, 'James Michael', 2, 4, 'Business Administration'), (20100003, 'James Bond', 3, 1, 'Computer Science'),
+(20070005, 'Olivia Madison', 2, 5, 'English Language and Literature');
+
+insert into department VALUES
+(1, 'Computer Science', 'Science Building 101', '02-3290-0123'),
+(2, 'Electrical Engineering', 'Engineering Building 401', '02-3290-2345'),
+(3, 'Law', 'Law Building 201', '02-3290-7896'),
+(4,  'Business Administration', 'Business Building 104', '02-3290-1112'),
+(5, 'English Language and Literature', 'Language Building 303', '02-3290-4412');
+
+update department set dept_name = "Electrical and Electronics Engineering" where dept_name = "Electrical Engineering";
+insert into department VALUES (6, 'Speial Education', 'Education Building 403', '02-3290-2347');
+update student set dept_no = "6" where name = "Emma Watson";
+update student set major = "Special Education" where name = "Emma Watson";
+delete from student where name = "Jason Mraz";
+delete from student where name = "John Smith";
+select * from student where major = "Computer Science";
+select student_id, year, major from student;
+select * from student where year = '3';
+select * from student where year = '1' || year = '2';
+select * from student join department on student.dept_no = department.dept_no and student.major = department.dept_name where major = "Business Administration";
+select * from student where student_id LIKE '%2007%';
+select * from student order by student_id;
+select major from student group by major having avg(year) > 3;
+select * from student where student_id LIKE '%2007%' LIMIT 2;
+
+select * from roles where movie_id = '254943';
+select first_name, last_name, roles.role from actors join roles where id = roles.actor_id and roles.movie_id = '254943';
+select ac1.first_name, ac1.last_name from actors ac1 join roles ro1 on ro1.actor_id = ac1.id and ro1.movie_id = '176712' join roles ro2 on ro2.actor_id = ac1.id and ro2.movie_id = '176711';
+select actor_id, count(movie_id) from roles group by actor_id order by count(movie_id) desc limit 7;
+select genre, count(genre) from movies_genres group by genre order by count(genre) desc limit 3;
+select first_name, last_name FROM directors, movies_directors D, movies_genres G WHERE id = D.director_id AND D.movie_id = G.movie_id AND genre = 'Thriller' GROUP BY director_id ORDER BY count(director_id) DESC LIMIT 1;
+select grade FROM grades, courses WHERE id = course_id AND name = 'Computer Science 143';
+select name, grade FROM students, grades WHERE (grade LIKE 'A%' OR grade LIKE 'B%') AND id = student_id AND course_id IN (select id FROM courses WHERE name = 'Computer Science 143');
+select S.name, C.name, grade FROM students S, courses C, grades WHERE (grade LIKE 'A%' OR grade LIKE 'B%') AND S.id = student_id AND C.id = course_id;
+select name FROM courses, grades WHERE id = course_id GROUP BY course_id HAVING count(student_id) >= 2;
