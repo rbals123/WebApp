@@ -79,4 +79,4 @@ function malkovich() {
   }$("text").value = result;
 }
 
-window.onload = pageLoad;
+window.onload = functionLoad;
